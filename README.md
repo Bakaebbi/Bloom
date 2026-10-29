@@ -1,5 +1,7 @@
 # BLOOM
 
+[Открыть сайт](https://bakaebbi.github.io/Bloom/) · [Исходный код](https://github.com/Bakaebbi/Bloom)
+
 Демонстрационный каталог цветочного бутика. HTML, CSS и Vanilla JavaScript с нативными ES-модулями. Без зависимостей и сборки.
 
 ## Запуск
