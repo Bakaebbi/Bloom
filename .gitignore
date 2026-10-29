@@ -1,0 +1,13 @@
+# Локальные настройки редакторов и AI-агентов
+.idea/
+.vscode/
+.agents/
+.codex/
+.hallmark/
+
+# Личные настройки и временные файлы
+.env
+.env.*
+*.log
+.DS_Store
+Thumbs.db

@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fff8fc">
+    <meta name="description"
+          content="BLOOM – демонстрационный каталог цветочного бутика. Букеты, монобукеты и композиции.">
+    <title>BLOOM – цветы с чувством</title>
+    <link rel="icon" href="./assets/images/logo-mark.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;600&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <script type="module" src="./js/main.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#catalog-section">Перейти к каталогу</a>
+<header class="site-header wrap">
+    <nav aria-label="Основная навигация">
+        <a href="#catalog-section">Каталог</a>
+        <a href="#about">О нас</a>
+    </nav>
+    <div class="brand">
+        <a class="logo" href="./" aria-label="BLOOM – на главную">
+            <img src="./assets/images/logo-mark.svg" alt="" width="48" height="48">
+            <span>BLOOM</span>
+        </a>
+        <p>Цветочный бутик</p>
+    </div>
+    <button class="cart-toggle" id="cart-open" type="button" aria-haspopup="dialog" aria-controls="cart-dialog">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5"
+             aria-hidden="true">
+            <path d="M5 7h14l1 14H4L5 7Z"/>
+            <path d="M8 8V6a4 4 0 0 1 8 0v2"/>
+        </svg>
+        <span>Корзина</span><span class="cart-count" id="cart-count">0</span>
+    </button>
+</header>
+
+<main>
+    <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-photo" data-slot="hero" data-alt="Крупный розовый цветок на фоне глубокой зелени">
+            <img src="./assets/images/rosa-canina-focus-stacked-20220522-rm-123334-1920.jpg"
+                 alt="Нежно-розовый цветок шиповника крупным планом на тёмно-зелёном фоне" width="1920" height="1440"
+                 fetchpriority="high">
+        </div>
+        <div class="hero-content wrap">
+            <h1 id="hero-title">Чувства,<br>которым нужны<br>цветы</h1>
+            <p class="hero-description">Для важных слов, тихого «спасибо» и для себя, просто так</p>
+            <a class="button button-primary" href="#catalog-section">Найти свой букет</a>
+        </div>
+        <p class="hero-caption">Нежность в каждом лепестке</p>
+    </section>
+
+    <div class="values-strip wrap">
+        <p>Цветы вместо тысячи слов</p>
+        <p>Продуманные сочетания</p>
+        <p>Бережно к деталям</p>
+    </div>
+
+    <section class="catalog-section wrap" id="catalog-section" aria-labelledby="catalog-title">
+        <header class="section-heading">
+            <h2 id="catalog-title">Каталог цветов</h2>
+            <p>Ваш повод расцвести</p>
+        </header>
+        <div class="catalog-layout">
+            <aside class="catalog-sidebar" aria-label="Выбор категории">
+                <div class="catalog-toolbar">
+                    <div class="filters" role="group" aria-label="Категория товаров">
+                        <button class="filter is-active" type="button" data-category="all" aria-pressed="true">Все
+                            цветы
+                        </button>
+                        <button class="filter" type="button" data-category="bouquets" aria-pressed="false">Букеты
+                        </button>
+                        <button class="filter" type="button" data-category="mono" aria-pressed="false">Монобукеты
+                        </button>
+                        <button class="filter" type="button" data-category="compositions" aria-pressed="false">
+                            Композиции
+                        </button>
+                    </div>
+                    <p class="sidebar-note">Особенные цветы.<br>Для особенных людей</p>
+                </div>
+            </aside>
+            <div class="catalog-content">
+                <div class="catalog-meta">
+                    <p class="results-count" id="results-count" aria-live="polite" aria-atomic="true"></p>
+                    <div class="sort-control">
+                        <label for="sort">Сортировка</label>
+                        <select id="sort">
+                            <option value="default">По умолчанию</option>
+                            <option value="price-asc">Сначала дешевле</option>
+                            <option value="price-desc">Сначала дороже</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="catalog-grid" id="catalog"></div>
+                <noscript><p>Включите JavaScript, чтобы увидеть каталог и пользоваться корзиной.</p></noscript>
+            </div>
+        </div>
+        <p class="catalog-note">Каждый букет – маленькая история. Какую расскажете вы?</p>
+    </section>
+
+    <section class="about-section" id="about" aria-labelledby="about-title">
+        <div class="wrap about-inner">
+            <h2 id="about-title">Красота<br>в простых знаках<br>внимания</h2>
+            <div class="about-copy">
+                <p>Мы придумали BLOOM как место, где легко найти цветы под настроение. Нежные оттенки, естественные
+                    формы и внимание к каждой детали.</p>
+                <p>Этот бутик – демонстрационный проект. Здесь можно выбрать букет и собрать корзину, но нельзя оформить
+                    настоящий заказ.</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer wrap">
+    <div class="footer-brand">
+        <a class="logo" href="./" aria-label="BLOOM – на главную">
+            <img src="./assets/images/logo-mark.svg" alt="" width="48" height="48">
+            <span>BLOOM</span>
+        </a>
+        <p>Пусть хорошее расцветает</p>
+    </div>
+    <div class="footer-notes">
+        <p>Собираем с заботой. Дарим с чувством.</p>
+        <p>Маленький повод для большой нежности.</p>
+        <p>© BLOOM, 2026. Демо-проект.</p>
+        <p class="photo-credit" data-credits>Фотография: <a
+                href="https://commons.wikimedia.org/wiki/File:Rosa_canina_focus_stacked-20220522-RM-123334.jpg">Ermell,
+            Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.
+        </p>
+    </div>
+</footer>
+
+<dialog class="cart-dialog" id="cart-dialog" aria-labelledby="cart-title" aria-describedby="cart-description">
+    <div class="cart-panel">
+        <header class="cart-header">
+            <h2 id="cart-title">Корзина</h2>
+            <button class="icon-button" id="cart-close" type="button" aria-label="Закрыть корзину" autofocus>
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5"
+                     aria-hidden="true">
+                    <path d="m6 6 12 12M18 6 6 18"/>
+                </svg>
+            </button>
+        </header>
+        <p class="cart-description" id="cart-description">Ваш выбор. Немного красоты для вашего дня.</p>
+        <div class="cart-items" id="cart-items"></div>
+        <p class="visually-hidden" id="cart-feedback" role="status" aria-live="polite" aria-atomic="true"></p>
+        <footer class="cart-summary">
+            <div class="total-row"><span>Итого</span><strong id="cart-total">0 ₽</strong></div>
+            <p>Демонстрационная корзина. Оформление заказа и оплата недоступны.</p>
+            <button class="button button-primary" id="cart-continue" type="button">Продолжить выбирать</button>
+        </footer>
+    </div>
+</dialog>
+<div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+<p class="storage-notice" id="storage-notice" role="status" hidden></p>
+</body>
+</html>
